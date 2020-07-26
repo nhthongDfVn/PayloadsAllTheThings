@@ -215,6 +215,12 @@ include('phar://test.phar');
 ```
 
 NOTE: The unserialize is triggered for the phar:// wrapper in any file operation, `file_exists` and many more.
+Some function: `copy`,`file_exists`,`file_get_contents`,`file_put_contents`,`file`,`fileatime`,`filectime`,`filegroup`,`fileinode`,`filemtime`,`fileowner`,`fileperms`,`filesize`,`filetype`,`fopen`,`is_dir`,`is_executable`,`is_file`,`is_link`,`is_readable`,`is_writeable`,`lstat`,`mkdir`,`parse_ini_file`,`readfile`,`rename`,`rmdir`,`stat`,`touch`,`unlink`
+
+Resourse: 
+1 . https://sec.vnpt.vn/2019/08/ky-thuat-khai-thac-lo-hong-phar-deserialization/ 
+2 . https://blog.usejournal.com/diving-into-unserialize-phar-deserialization-98b1254380e9 
+3 . https://www.ixiacom.com/company/blog/exploiting-php-phar-deserialization-vulnerabilities-part-1
 
 ## LFI to RCE via /proc/*/fd
 
