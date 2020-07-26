@@ -282,6 +282,11 @@ Use the script phpInfoLFI.py (also available at https://www.insomniasec.com/down
 
 Research from https://www.insomniasec.com/downloads/publications/LFI%20With%20PHPInfo%20Assistance.pdf
 
+If OpCache is enable, the cache of file can be found in  /var/www/cache/[system_id]/var/www/html/[file name].php.bin
+For getting system_id, I used https://github.com/GoSecure/php7-opcache-override.
+Example : https://vuln.live/blog/11
+
+
 ## LFI to RCE via controlled log file
 
 Just append your PHP code into the log file by doing a request to the service (Apache, SSH..) and include the log file.
