@@ -33,5 +33,13 @@
     `3' or '1'='1`
     `3' or sleep(1) -- +`
     `3' union select * from user -- +`
+### NoSQL Injection
+### XSS
+### LFI, RFI
+### Command Injection
+### SSTI
+1. Test `{{4*4}}[[5*5]]`
+### XXE
+
 
 ## Client
