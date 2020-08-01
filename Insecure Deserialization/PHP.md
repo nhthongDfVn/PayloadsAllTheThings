@@ -10,6 +10,8 @@ The following magic methods will help you for a PHP Object injection
 
 Also you should check the `Wrapper Phar://` in [File Inclusion](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion#wrapper-phar) which use a PHP object injection.
 
+If you don't know any class name: using `stdclass` class
+
 ## __wakeup in the unserialize function
 
 Vulnerable code:
