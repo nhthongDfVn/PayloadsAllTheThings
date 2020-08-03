@@ -221,6 +221,16 @@ SELECT $$This is a string$$
 SELECT $TAG$This is another string$TAG$
 ```
 
+Bypass with UTF-16 encoding
+https://www.postgresql.org/docs/9.2/sql-syntax-lexical.html#SQL-SYNTAX-STRINGS-UESCAPE
+```sql
+testdb=# SELECT U&'\0074\0065\0073\0074';
+ ?column?
+----------
+ test
+(1 row)
+```
+
 
 
 ## References
